@@ -9,7 +9,7 @@ body {
 
 h2, h3 {
   text-align: center;
-  color: #333;
+  color: #ffffff;
 }
 
 h1, p {
@@ -37,8 +37,8 @@ h1, p {
 }
 
 .cover-img {
-  width: 180px;  /* Ajustamos la imagen para que quede bien en la caja */
-  height: 180px; /* Mantenerla cuadrada */
+  width: 200px;  /* Ajustamos la imagen para que quede bien en la caja */
+  height: 200px; /* Mantenerla cuadrada */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;  /* Separación entre imagen y texto */
@@ -53,7 +53,7 @@ h1, p {
 #song-title {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333; /* Color del texto */
+  color: #40304a; /* Color del texto */
   margin-top: 10px;
 }
 
