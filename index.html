@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Casa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Reproductor Musical -->
+    <header>
+        <div class="music-player">
+            <h2>Reproductor Musical</h2>
+            <div class="player">
+                <!-- Imagen de portada de la canción -->
+                <img id="album-cover" src="images/cover1.jpg" alt="Portada de la canción" class="cover-img">
+                <button id="change-song">Reproducir canción</button>
+                <p id="song-title">Song 1: House of the Rising Sun</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Galería de Fotografías -->
+    <section class="gallery">
+        <h3>Galería Fotográfica</h3>
+        <div class="photos">
+            <div class="photo" data-text="Texto sobre la foto 1">
+                <img src="images/foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 2">
+                <img src="images/foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 3">
+                <img src="images/foto3.jpg" alt="Foto 3">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 4">
+                <img src="images/foto4.jpg" alt="Foto 4">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 5">
+                <img src="images/foto5.jpg" alt="Foto 5">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 6">
+                <img src="images/foto6.jpg" alt="Foto 6">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 7">
+                <img src="images/foto7.jpg" alt="Foto 7">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 8">
+                <img src="images/foto8.jpg" alt="Foto 8">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 9">
+                <img src="images/foto9.jpg" alt="Foto 9">
+            </div>
+            <div class="photo" data-text="Texto sobre la foto 10">
+                <img src="images/foto10.jpg" alt="Foto 10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Muro de Definiciones de Casa -->
+    <section class="definition-wall">
+        <h3>¿Qué es tu Casa?</h3>
+        <form id="definition-form">
+            <textarea id="user-definition" placeholder="Escribe tu definición de casa..."></textarea>
+            <input type="file" id="image-upload" accept="image/*">
+            <button type="submit">Agregar definición</button>
+        </form>
+        <div id="wall">
+            <!-- Definiciones y fotos enviadas por los usuarios aparecerán aquí -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
