@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+<header id="header">
+    <h1>una casa</h1>
+</header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<section id="reflexion-casa">
+    <p class="reflexion-texto">
+        La casa no es solo una estructura de paredes y techos. Es un refugio, un espacio que acoge nuestras emociones, que guarda nuestras historias, y que, con el paso del tiempo, se convierte en un mapa de quienes somos. Cada rincón cuenta una historia, cada ventana refleja nuestras inquietudes. La casa, en su forma más pura, es el lugar donde nos encontramos a nosotros mismos, donde las memorias se entrelazan con la luz que entra por una ventana, donde el alma se acurruca en la familiaridad de lo cotidiano. En cada casa, hay una quietud que se convierte en vibración cuando dejamos de simplemente habitarla y comenzamos a vivirla.
+    </p>
+</section>
 
     <!-- Reproductor Musical -->
     <header>
@@ -20,12 +28,32 @@
             </div>
         </div>
     </header>
+    <section id="poemas">
+    <h2>escritos sobre la casa</h2>
+    <div class="poema-container">
+        <div class="poema">
+            <p class="titulo">Sin título.</p>
+            <p class="contenido">"Escucho no a mi madre decir mi nombre. No el paso de mi padre por el corredor. Escucho no la risa de mis hermanos a manera de sombra sin registro.  La casa está vacía.  O sería mejor decir; vacía nuestra casa sin cuerpos que alimenten mi amor al mundo, mi temor profundo a los amaneceres. Y nadie grita de afuera, por la ventana no se ve nadie y me siento sola."</p>
+            <p class="autor">– Damian Salguero Bastidas</p>
+        </div>
+        <div class="poema">
+            <p class="titulo">Casa.</p>
+            <p class="contenido">"Mi casa es un jardín enamorado Que crece insoportable bajo el sol Mi casa son tres risas que se abrazan ¿Qué dicen los que saben que es amor? Y entiendo que la vida me reproche Mi insólita vejez del corazón Mi casa es una estrella que se apaga Que triste se despide de mi voz Que triste se despide de mi voz"</p>
+            <p class="autor">– Silvana Estrada</p>
+        </div>
+        <div class="poema">
+            <p class="titulo">Sendero de mi vida.</p>
+            <p class="contenido">"Nací en le fertil tierra Junto al calor del padre sol Bebí el manantial puro de la vida Me acompañó la brisa fresca del viento                  El amanecer, el anochecer Vieron mi llegar Sentí el canto de las montañas alegres Soñé los senderos que debía correr Soy música, viento y páramo Soy danza y alegría Soy música viento y páramo Soy danza y alegría." </p>
+            <p class="autor">– Leider Yalanda</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Galería de Fotografías -->
+    
     <section class="gallery">
         <h3>mi casa</h3>
         <div class="photos">
-            <!-- Fotos de la galería -->
+            
             <div class="photo" data-text="una montaña que abraza">
                 <img src="images/foto1.jpg" alt="Foto 1">
             </div> 
@@ -65,18 +93,22 @@
         </div>
     </section>
 
-    <!-- Muro de Definiciones de Casa -->
-    <section class="definition-wall">
-        <h3>¿cómo es tu casa?</h3>
-        <form id="definition-form">
-            <textarea id="user-definition" placeholder="Escribe tu definición de casa..."></textarea>
-            <input type="file" id="image-upload" accept="image/*">
-            <button type="submit">Agregar definición</button>
-        </form>
-        <div id="wall">
-            <!-- Definiciones y fotos enviadas por los usuarios aparecerán aquí -->
-        </div>
-    </section>
+   <section id="muro-definiciones">
+    <h2>¿Qué es para ti "la casa"?</h2>
+    <p>Deja tu definición, palabra o imagen, díme lo que significa el hogar para ti.</p>
+    
+    <form id="formulario-definicion">
+        <textarea id="texto-definicion" placeholder="Escribe aquí tu definición..." required></textarea>
+        <br>
+        <input type="file" id="imagen-definicion" accept="image/*">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <div id="definiciones-muro">
+        
+    </div>
+</section>
 
     <script src="script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-// Lista de canciones y sus portadas
+
 const songs = [
   {
     title: "Casa - Silvana Estrada",
@@ -47,16 +47,59 @@ const songTitleElement = document.getElementById("song-title");
 const albumCoverElement = document.getElementById("album-cover");
 const changeSongButton = document.getElementById("change-song");
 
-// Función para cambiar la canción
+
 function changeSong() {
-  currentSongIndex = (currentSongIndex + 1) % songs.length;  // Ciclo a través de las canciones
+  currentSongIndex = (currentSongIndex + 1) % songs.length;  
   
-  // Cambiar el título de la canción
+  
   songTitleElement.textContent = songs[currentSongIndex].title;
   
-  // Cambiar la portada de la canción
+ 
   albumCoverElement.src = songs[currentSongIndex].cover;
 }
 
-// Asignar el evento de clic para cambiar la canción
+
 changeSongButton.addEventListener("click", changeSong);
+
+document.getElementById('formulario-definicion').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    
+    const texto = document.getElementById('texto-definicion').value;
+    const imagenInput = document.getElementById('imagen-definicion');
+    const imagenFile = imagenInput.files[0]; 
+
+    if (texto.trim() === "" && !imagenFile) {
+        alert("Por favor, escribe una definición o sube una imagen.");
+        return;
+    }
+
+    const nuevaDefinicion = document.createElement('div');
+    nuevaDefinicion.classList.add('definicion');
+    
+    if (texto.trim() !== "") {
+        const nuevoTexto = document.createElement('p');
+        nuevoTexto.textContent = texto;
+        nuevaDefinicion.appendChild(nuevoTexto);
+    }
+
+    if (imagenFile) {
+        const lector = new FileReader();
+        lector.onload = function(e) {
+            const nuevaImagen = document.createElement('img');
+            nuevaImagen.src = e.target.result;
+            nuevaImagen.classList.add('imagen-definicion');
+            nuevaDefinicion.appendChild(nuevaImagen);
+        };
+        lector.readAsDataURL(imagenFile);
+    }
+
+
+    const muro = document.getElementById('definiciones-muro');
+    muro.appendChild(nuevaDefinicion);
+
+  
+    document.getElementById('texto-definicion').value = '';
+    document.getElementById('imagen-definicion').value = '';
+});
+

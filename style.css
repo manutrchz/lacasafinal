@@ -3,9 +3,56 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #272d39, #3c2f3f, #6e5864); 
+  background: linear-gradient(to right, #d9a5c5, #1e363d, #6e5864); 
   color: #333;
 }
+#header {
+    background: linear-gradient(135deg, #373044, #1e363d, #d9a5c5); 
+    padding: 80px 20px;
+    text-align: center;
+    color: rgb(242, 193, 193);
+    border-bottom: 2px solid #005324;
+}
+
+#header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.reflexion-texto {
+    font-size: 1.1em; 
+    line-height: 2;
+    text-align: right;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    text-indent: 30px; 
+    letter-spacing: 1px; 
+}
+
+#reflexion-casa::before {
+    content: "“";
+    font-size: 3em;
+    color: #6a4f97;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+#reflexion-casa::after {
+    content: "”";
+    font-size: 3em;
+    color: #6a4f97;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}
+
 
 h2, h3 {
   text-align: center;
@@ -16,44 +63,43 @@ h1, p {
   text-align: center;
 }
 
-/* Reproductor Musical */
 .music-player {
-  width: 300px;  /* Ancho más reducido para hacerlo cuadrado */
-  height: 350px; /* Ajustamos la altura para que sea más cuadrada */
+  width: 300px;
+  height: 350px;
   margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco con transparencia */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 20px;
-  border-radius: 15px;  /* Bordes redondeados */
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .player {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; /* Acomoda los elementos con más espacio */
-  height: 100%;  /* Asegura que el contenido se acomode dentro de la caja */
+  justify-content: space-around;
+  height: 100%;
 }
 
 .cover-img {
-  width: 200px;  /* Ajustamos la imagen para que quede bien en la caja */
-  height: 200px; /* Mantenerla cuadrada */
+  width: 200px; 
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 15px;  /* Separación entre imagen y texto */
+  margin-bottom: 15px;  
   transition: transform 0.3s ease;
 }
 
-/* Efecto de hover en la portada */
+
 .cover-img:hover {
-  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+  transform: scale(1.05);
 }
 
 #song-title {
   font-size: 1.2em;
   font-weight: bold;
-  color: #40304a; /* Color del texto */
+  color: #40304a;
   margin-top: 10px;
 }
 
@@ -66,15 +112,76 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
-  width: 80%; /* Ancho del botón */
-  max-width: 180px; /* Máximo tamaño para el botón */
+  width: 80%;
+  max-width: 180px;
 }
 
 button:hover {
-  background-color: #283593;  /* Color al pasar el mouse */
+  background-color: #283593;
+}
+#poemas {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
 }
 
-/* Galería de Fotografías */
+#poemas h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #3b6c3a;
+}
+
+.poema-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.poema {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.poema:hover {
+    transform: translateY(-10px);
+}
+
+.poema .titulo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #10460f;
+    margin-bottom: 10px;
+}
+
+.poema .autor {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.poema .contenido {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .poema-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poema {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
 .gallery {
   margin-top: 100px;
   padding: 80px;
@@ -123,74 +230,64 @@ button:hover {
   transition: opacity 0.3s ease;
 }
 
-/* Muro de Definiciones de Casa */
-.definition-wall {
-  margin: 50px auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#muro-definiciones {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.definition-wall h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+#muro-definiciones h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a4f97;
 }
 
-#definition-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+#muro-definiciones form {
+    margin-bottom: 30px;
 }
 
-#user-definition {
-  width: 100%;
-  max-width: 500px;
-  padding: 10px;
-  font-size: 1em;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  min-height: 100px;
-  resize: vertical;
+#muro-definiciones textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
 }
 
-#image-upload {
-  margin-bottom: 15px;
+#muro-definiciones input[type="file"] {
+    margin-bottom: 10px;
 }
 
-button[type="submit"] {
-  background-color: #3f51b5;
-  color: white;
-  font-size: 1.1em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#muro-definiciones button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #6a4f97;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #283593;
+#muro-definiciones button:hover {
+    background-color: #4a3d74;
 }
 
-#wall {
-  margin-top: 20px;
+#definiciones-muro {
+    margin-top: 30px;
 }
 
-.definition {
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.definicion {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.definition img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 5px;
+.definicion img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
