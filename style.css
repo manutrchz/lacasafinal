@@ -76,8 +76,8 @@ button:hover {
 
 /* Galería de Fotografías */
 .gallery {
-  margin-top: 50px;
-  padding: 20px;
+  margin-top: 100px;
+  padding: 80px;
 }
 
 .gallery h3 {
@@ -88,14 +88,14 @@ button:hover {
 .photos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 9px;
   justify-items: center;
 }
 
 .photo {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 9px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -113,8 +113,8 @@ button:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 1.2em;
+  color: #ffffff;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
   justify-content: center;
